@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 26, 2024 at 09:43 AM
+-- Generation Time: Mar 19, 2024 at 08:22 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.2
 
@@ -44,7 +44,10 @@ INSERT INTO `candidate` (`ID`, `name`, `course`, `year`, `position`) VALUES
 (1, 'Halima Hamad', 'BBF', 'Second Year', 'President'),
 (2, 'David Shungu', 'BIT', 'First Year', 'President'),
 (5, 'Vanessa Fransis', 'BAC', 'Second Year', 'Faculty Representati'),
-(6, 'Jamila Mgunda', 'BIT', 'Second Year', 'Faculty Representati');
+(6, 'Jamila Mgunda', 'BIT', 'Second Year', 'Faculty Representati'),
+(7, 'mess', 'ronaldp', '2', 'president'),
+(8, 'jack', 'kigawe', '2', 'president'),
+(9, 'johnson', 'wile', '2', 'vice presdent');
 
 -- --------------------------------------------------------
 
@@ -65,10 +68,11 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`SID`, `Sname`, `Course`, `Year`, `Status`) VALUES
-('IMC/BCS/2222452', 'KELVIN MGUHI', 'BCS', 'Second Year', 'Voted'),
+('IMC/BCS/2222452', 'Elishama', 'BCS', 'Third Year', 'Voted'),
 ('IMC/BIT/22222222', 'Mwesi Mwesi', 'BIT', 'Second Year', 'Voted'),
 ('IMC/BIT/22393880', 'HALOO HELLO', 'BCS', 'First Year', 'Voted'),
-('IMC/BIT/227649901', 'HAMAD KIBU', 'BIT', 'Second Year', 'Unvoted');
+('IMC/BIT/227649901', 'HAMAD KIBU', 'BIT', 'Second Year', 'Unvoted'),
+('IMC/BSP/2224234', 'JULY', 'BSP', '1', 'Voted');
 
 -- --------------------------------------------------------
 
@@ -108,10 +112,10 @@ CREATE TABLE `votes` (
 --
 
 INSERT INTO `votes` (`CandidateID`, `VoteCount`, `Position`) VALUES
-(1, 6, 'President'),
+(1, 7, 'President'),
 (2, 3, 'President'),
 (5, 6, 'Faculty Representative'),
-(6, 3, 'Faculty Representative');
+(6, 4, 'Faculty Representative');
 
 --
 -- Indexes for dumped tables
@@ -149,7 +153,7 @@ ALTER TABLE `votes`
 -- AUTO_INCREMENT for table `candidate`
 --
 ALTER TABLE `candidate`
-  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `ID` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
